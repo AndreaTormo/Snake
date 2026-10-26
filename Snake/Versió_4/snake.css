@@ -1,0 +1,162 @@
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+table{
+    margin: 0 auto;
+    font-family: 'Times New Roman', Times, serif;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: auto;
+    height: auto;
+    background-color: rgb(219, 219, 219);
+}
+
+td, tr{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 80px;
+    height: 80px;
+}
+
+.serp {
+    position: relative;
+    z-index: 1;
+    transform: scale(0.75); 
+    background: radial-gradient(circle at 35% 30%, #7ddc5a, #2e8b1f);
+    border-radius: 45%;
+    box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* Ulls */
+.cap_serp::before {
+    content: "";
+    position: absolute;
+    top: 22%;
+    left: 15%;
+    width: 70%;
+    height: 24%;
+    background:
+        radial-gradient(circle closest-side, white 0 60%, black 60% 95%, transparent 100%) left / 40% 100% no-repeat,
+        radial-gradient(circle closest-side, white 0 60%, black 60% 95%, transparent 100%) right / 40% 100% no-repeat;
+}
+
+/* Llengua */
+.cap_serp::after {
+    content: "";
+    position: absolute;
+    top: 85%;
+    left: 42%;
+    width: 16%;
+    height: 40%;
+    background: #e0202a;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 70%, 0 100%);
+}
+.poma {
+    position: relative;
+}
+
+/* Cos */
+.poma::before {
+    content: "";
+    position: absolute;
+    inset: 15%;
+    background: radial-gradient(circle at 35% 30%, #ff8a8a, #c0151b);
+    border-radius: 50%;
+}
+
+/* Rabet */
+.poma::after {
+    content: "";
+    position: absolute;
+    top: 8%;
+    left: 48%;
+    width: 8%;
+    height: 18%;
+    background: #5a3a1a;
+    border-radius: 2px;
+}
+
+.marcador {
+    display: block;
+    width: fit-content;
+    margin: 15px auto;
+    padding: 8px 24px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #2e7d32;
+    background: #e8f5e9;
+    border: 3px solid #2e7d32;
+    border-radius: 12px;
+}
+
+
+.poma {
+    position: relative;
+}
+
+/* Cos */
+.poma::before {
+    content: "";
+    position: absolute;
+    inset: 15%;
+    background: radial-gradient(circle at 35% 30%, #ff8a8a, #c0151b);
+    border-radius: 50%;
+}
+
+/* Rabet */
+.poma::after {
+    content: "";
+    position: absolute;
+    top: 8%;
+    left: 48%;
+    width: 8%;
+    height: 18%;
+    background: #5a3a1a;
+    border-radius: 2px;
+}
+
+.marcador {
+    display: block;
+    width: fit-content;
+    margin: 15px auto;
+    padding: 8px 24px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #2e7d32;
+    background: #e8f5e9;
+    border: 3px solid #2e7d32;
+    border-radius: 12px;
+}
+
+.barra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin: 15px auto;
+}
+
+.barra .marcador {
+    margin: 0;   /* el centrado lo hace .barra */
+}
+
+.boto {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 8px 24px;
+    color: #2e7d32;
+    background: #e8f5e9;
+    border: 3px solid #2e7d32;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.boto:hover {
+    background: #2e7d32;
+    color: #e8f5e9;
+}
