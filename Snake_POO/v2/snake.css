@@ -1,0 +1,207 @@
+body {
+    background-color: #121212;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+table{
+    /* Per a que el tablero del snake s'ajuste al tamany de la pantalla */
+    --n: 10;                 
+    --reservat: 220px;      
+    --celda: min(
+        80px,                                   
+        calc((100dvh - var(--reservat)) / var(--n)),  
+        calc((100vw - 40px) / var(--n))               
+    );
+    
+    margin: 0 auto;
+    font-family: 'Times New Roman', Times, serif;
+    border-collapse: collapse;
+    width: auto;
+    height: auto;
+    background-color: #989898;
+    border: 1px solid #777676;
+}
+
+td, tr {
+    border: 1px solid #828282;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    width: var(--celda);
+    height: var(--celda);
+}
+
+.serp {
+    position: relative;
+    z-index: 1;
+    transform: scale(0.75); 
+    background: radial-gradient(circle at 35% 30%, #7ddc5a, #2e8b1f);
+    border-radius: 45%;
+    box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* Ulls */
+.cap_serp::before {
+    content: "";
+    position: absolute;
+    top: 22%;
+    left: 15%;
+    width: 70%;
+    height: 24%;
+    background:
+        radial-gradient(circle closest-side, white 0 60%, black 60% 95%, transparent 100%) left / 40% 100% no-repeat,
+        radial-gradient(circle closest-side, white 0 60%, black 60% 95%, transparent 100%) right / 40% 100% no-repeat;
+}
+
+/* Llengua */
+.cap_serp::after {
+    content: "";
+    position: absolute;
+    top: 85%;
+    left: 42%;
+    width: 16%;
+    height: 40%;
+    background: #e0202a;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 70%, 0 100%);
+}
+
+.marcador {
+    display: block;
+    width: fit-content;
+    margin: 15px auto;
+    padding: 8px 24px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #2e7d32;
+    background: #e8f5e9;
+    border: 3px solid #2e7d32;
+    border-radius: 12px;
+}
+
+
+.poma {
+    position: relative;
+}
+
+/* Cos */
+.poma::before {
+    content: "";
+    position: absolute;
+    inset: 15%;
+    background: radial-gradient(circle at 35% 30%, #ff8a8a, #c0151b);
+    border-radius: 50%;
+}
+
+/* Rabet */
+.poma::after {
+    content: "";
+    position: absolute;
+    top: 8%;
+    left: 48%;
+    width: 8%;
+    height: 18%;
+    background: #5a3a1a;
+    border-radius: 2px;
+}
+
+.marcador {
+    display: block;
+    width: fit-content;
+    margin: 15px auto;
+    padding: 8px 24px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #2e7d32;
+    background: #e8f5e9;
+    border: 3px solid #2e7d32;
+    border-radius: 12px;
+}
+
+.barra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin: 15px auto;
+}
+
+.barra .marcador {
+    margin: 0;   /* el centrado lo hace .barra */
+}
+
+.boto {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 8px 24px;
+    color: #2e7d32;
+    background: #e8f5e9;
+    border: 3px solid #2e7d32;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.boto:hover {
+    background: #2e7d32;
+    color: #e8f5e9;
+}
+
+.historial {
+    width: fit-content;
+    margin: 15px auto;
+    padding: 8px 24px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: #2e7d32;
+    background: #e8f5e9;
+    border: 3px solid #2e7d32;
+    border-radius: 12px;
+}
+
+.historial h2 {
+    margin: 8px 0;
+    font-size: 22px;
+}
+
+.historial ul {
+    list-style: none;
+    margin: 8px 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.poma_podrida {
+    position: relative;
+}
+
+/* Cos podrit */
+.poma_podrida::before {
+    content: "";
+    position: absolute;
+    inset: 15%;
+    background:
+        radial-gradient(circle at 30% 35%, #3a2a10 0 8%, transparent 9%),
+        radial-gradient(circle at 65% 55%, #3a2a10 0 6%, transparent 7%),
+        radial-gradient(circle at 40% 70%, #3a2a10 0 5%, transparent 6%),
+        radial-gradient(circle at 35% 30%, #b7c97a, #4d5a1f);
+    border-radius: 50%;
+}
+
+/* Rabet */
+.poma_podrida::after {
+    content: "";
+    position: absolute;
+    top: 8%;
+    left: 48%;
+    width: 8%;
+    height: 18%;
+    background: #3f2a12;
+    border-radius: 2px;
+}
+
